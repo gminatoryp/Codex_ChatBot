@@ -39,9 +39,9 @@ app.post('/', async (req,res) => {
         bot: response.data.choices[0].text
     })
 } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).send( error || 'Something went wrong')
 }
-}) 
+});
 
 app.listen(3000, () => console.log('Server is running on port http://localhost:3000'))
