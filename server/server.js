@@ -33,8 +33,9 @@ app.post('/', async (req,res) => {
                     top_p: 1, 
                     frequency_penalty: 0.5,
                     presence_penalty: 0, 
-    }, {headers: {
-        'Authorization': `Bearer ${process.env.OPENAI_SECRET_KEY}`,
+    }, {
+        headers: {
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
     }});
 
     res.status(200).send({
